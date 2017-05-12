@@ -1,0 +1,29 @@
+const headers = {
+
+  'Accept': 'application/json',
+
+  'Content-Type': 'application/json'
+
+};
+
+// create -> /user POST
+
+const create = user => {
+
+  return fetch('/user', {
+
+    method: 'POST',
+
+    headers: headers,
+
+    credentials: 'include',
+
+    body: JSON.stringify(user)
+
+  }).then(res => {
+
+    return res.json();
+
+  });
+
+};
